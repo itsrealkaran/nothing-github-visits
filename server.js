@@ -8,7 +8,7 @@ const { load } = require("./node/load");
 const { render } = require("./node/render");
 
 const CARD = "visits";
-const GITHUB = process.env.GITHUB_REDIRECT || "https://github.com/itsrealkaran";
+const GITHUB = process.env.GITHUB_REDIRECT || "https://github.com/itsrealkaran/nothing-github-visits";
 const PORT = Number(process.env.PORT || 8080);
 const TTL = Number(process.env.CARD_CACHE_SECONDS || 3600);
 const MODES = new Set(["classic", "classic-r", "white", "white-r", "light", "red", "blue", "yellow"]);
