@@ -5,7 +5,7 @@ The dot grid is only the product name. Body labels use a mono face.
 """
 
 MODES = ("classic", "classic-r", "white", "white-r", "light", "red", "blue", "yellow")
-SIZES = ("compact", "regular", "wide")
+SIZES = ("mini", "compact", "regular", "wide")
 
 THEMES = {
     "classic": {
