@@ -342,7 +342,7 @@ Python 3 is enough. There is no package to install. Files land in `dist/<login>/
 
 ## Run locally
 
-The container serves the same path and the same query.
+The Python container and the Node server use the same path and the same query.
 
 ### Python container
 
@@ -361,13 +361,22 @@ The container runs `serve.py`. Open `http://127.0.0.1:8080/visits?username=itsre
 
 The image does not include the `gh` command. Set `GH_TOKEN` when you start it. Without a token, GitHub allows about 60 requests an hour.
 
+### Node
+
+```bash
+node server.js
+```
+
+The server listens on port `8080`. It reads `GH_TOKEN` from the environment, or from a `.env` file in this folder. `python3 render.py` remains the command that writes `dist/`.
+
+Vercel and Netlify can host `server.js`. Set `GH_TOKEN` on the project. `vercel.json` is included. A free function has a short time limit. Use the Python container when a request needs longer than that limit.
 
 ## Deploy
 
 Fork this repo for your own host. Your copy stays awake if a shared deploy sleeps, your traffic stays off a shared GitHub limit, and you can add a token for your own counts.
 
 1. Fork the repo.
-2. Deploy the Dockerfile on Fly, Railway, Render, Cloud Run, or a virtual machine.
+2. Deploy the Dockerfile on Fly, Railway, Render, Cloud Run, or a virtual machine. Or deploy `server.js` on Vercel or Netlify.
 3. Set the variables below as secrets. Do not commit them.
 4. Open `https://<your-host>/visits?username=yourname`.
 
@@ -390,7 +399,7 @@ Use that host in the image URL. The path and the query stay the same.
 
 ## Contributing
 
-This folder is the card: the drawing, the GitHub fetch, and the server.
+This folder is the card: the drawing, the GitHub fetch, and both servers.
 
 1. Fork the repo and edit `render.py`, or the files beside it when the change is the data or the colours.
 2. Draw a sample with `python3 render.py yourname` and open `dist/yourname/`.
