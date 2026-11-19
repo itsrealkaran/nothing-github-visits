@@ -23,14 +23,14 @@ def dots(text, x, y, fill, scale=2.4):
     return "".join(parts), cursor - x
 
 
-def open_svg(mode, width, height, title):
+def open_svg(mode, width, height, title, mark=8, margin=20):
     colors = theme(mode)
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
         f'viewBox="0 0 {width} {height}" role="img">'
         f"<title>{xml(title)}</title>"
         f'<rect width="{width}" height="{height}" fill="{colors["bg"]}"/>'
-        f'<rect x="20" y="20" width="8" height="8" fill="{colors["mark"]}"/>'
+        f'<rect x="{margin}" y="{margin}" width="{mark}" height="{mark}" fill="{colors["mark"]}"/>'
     )
 
 
