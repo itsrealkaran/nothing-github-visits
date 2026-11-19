@@ -4,113 +4,209 @@ Compact is the view count. Regular adds followers. Wide is one square per 100 vi
 
 ## classic
 
-### compact
+**visits** · classic · mini
 
-![classic compact](dist/itsrealkaran/classic-compact.svg)
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=classic&size=mini`
 
-### regular
+![visits classic mini](dist/itsrealkaran/classic-mini.svg)
 
-![classic regular](dist/itsrealkaran/classic-regular.svg)
+**visits** · classic · compact
 
-### wide
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=classic&size=compact`
 
-![classic wide](dist/itsrealkaran/classic-wide.svg)
+![visits classic compact](dist/itsrealkaran/classic-compact.svg)
+
+**visits** · classic · regular
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=classic&size=regular`
+
+![visits classic regular](dist/itsrealkaran/classic-regular.svg)
+
+**visits** · classic · wide
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=classic&size=wide`
+
+![visits classic wide](dist/itsrealkaran/classic-wide.svg)
 
 ## classic-r
 
-### compact
+**visits** · classic-r · mini
 
-![classic-r compact](dist/itsrealkaran/classic-r-compact.svg)
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=classic-r&size=mini`
 
-### regular
+![visits classic-r mini](dist/itsrealkaran/classic-r-mini.svg)
 
-![classic-r regular](dist/itsrealkaran/classic-r-regular.svg)
+**visits** · classic-r · compact
 
-### wide
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=classic-r&size=compact`
 
-![classic-r wide](dist/itsrealkaran/classic-r-wide.svg)
+![visits classic-r compact](dist/itsrealkaran/classic-r-compact.svg)
+
+**visits** · classic-r · regular
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=classic-r&size=regular`
+
+![visits classic-r regular](dist/itsrealkaran/classic-r-regular.svg)
+
+**visits** · classic-r · wide
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=classic-r&size=wide`
+
+![visits classic-r wide](dist/itsrealkaran/classic-r-wide.svg)
 
 ## white
 
-### compact
+**visits** · white · mini
 
-![white compact](dist/itsrealkaran/white-compact.svg)
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=white&size=mini`
 
-### regular
+![visits white mini](dist/itsrealkaran/white-mini.svg)
 
-![white regular](dist/itsrealkaran/white-regular.svg)
+**visits** · white · compact
 
-### wide
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=white&size=compact`
 
-![white wide](dist/itsrealkaran/white-wide.svg)
+![visits white compact](dist/itsrealkaran/white-compact.svg)
+
+**visits** · white · regular
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=white&size=regular`
+
+![visits white regular](dist/itsrealkaran/white-regular.svg)
+
+**visits** · white · wide
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=white&size=wide`
+
+![visits white wide](dist/itsrealkaran/white-wide.svg)
 
 ## white-r
 
-### compact
+**visits** · white-r · mini
 
-![white-r compact](dist/itsrealkaran/white-r-compact.svg)
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=white-r&size=mini`
 
-### regular
+![visits white-r mini](dist/itsrealkaran/white-r-mini.svg)
 
-![white-r regular](dist/itsrealkaran/white-r-regular.svg)
+**visits** · white-r · compact
 
-### wide
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=white-r&size=compact`
 
-![white-r wide](dist/itsrealkaran/white-r-wide.svg)
+![visits white-r compact](dist/itsrealkaran/white-r-compact.svg)
+
+**visits** · white-r · regular
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=white-r&size=regular`
+
+![visits white-r regular](dist/itsrealkaran/white-r-regular.svg)
+
+**visits** · white-r · wide
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=white-r&size=wide`
+
+![visits white-r wide](dist/itsrealkaran/white-r-wide.svg)
 
 ## light
 
-### compact
+**visits** · light · mini
 
-![light compact](dist/itsrealkaran/light-compact.svg)
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=light&size=mini`
 
-### regular
+![visits light mini](dist/itsrealkaran/light-mini.svg)
 
-![light regular](dist/itsrealkaran/light-regular.svg)
+**visits** · light · compact
 
-### wide
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=light&size=compact`
 
-![light wide](dist/itsrealkaran/light-wide.svg)
+![visits light compact](dist/itsrealkaran/light-compact.svg)
+
+**visits** · light · regular
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=light&size=regular`
+
+![visits light regular](dist/itsrealkaran/light-regular.svg)
+
+**visits** · light · wide
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=light&size=wide`
+
+![visits light wide](dist/itsrealkaran/light-wide.svg)
 
 ## red
 
-### compact
+**visits** · red · mini
 
-![red compact](dist/itsrealkaran/red-compact.svg)
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=red&size=mini`
 
-### regular
+![visits red mini](dist/itsrealkaran/red-mini.svg)
 
-![red regular](dist/itsrealkaran/red-regular.svg)
+**visits** · red · compact
 
-### wide
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=red&size=compact`
 
-![red wide](dist/itsrealkaran/red-wide.svg)
+![visits red compact](dist/itsrealkaran/red-compact.svg)
+
+**visits** · red · regular
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=red&size=regular`
+
+![visits red regular](dist/itsrealkaran/red-regular.svg)
+
+**visits** · red · wide
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=red&size=wide`
+
+![visits red wide](dist/itsrealkaran/red-wide.svg)
 
 ## blue
 
-### compact
+**visits** · blue · mini
 
-![blue compact](dist/itsrealkaran/blue-compact.svg)
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=blue&size=mini`
 
-### regular
+![visits blue mini](dist/itsrealkaran/blue-mini.svg)
 
-![blue regular](dist/itsrealkaran/blue-regular.svg)
+**visits** · blue · compact
 
-### wide
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=blue&size=compact`
 
-![blue wide](dist/itsrealkaran/blue-wide.svg)
+![visits blue compact](dist/itsrealkaran/blue-compact.svg)
+
+**visits** · blue · regular
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=blue&size=regular`
+
+![visits blue regular](dist/itsrealkaran/blue-regular.svg)
+
+**visits** · blue · wide
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=blue&size=wide`
+
+![visits blue wide](dist/itsrealkaran/blue-wide.svg)
 
 ## yellow
 
-### compact
+**visits** · yellow · mini
 
-![yellow compact](dist/itsrealkaran/yellow-compact.svg)
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=yellow&size=mini`
 
-### regular
+![visits yellow mini](dist/itsrealkaran/yellow-mini.svg)
 
-![yellow regular](dist/itsrealkaran/yellow-regular.svg)
+**visits** · yellow · compact
 
-### wide
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=yellow&size=compact`
 
-![yellow wide](dist/itsrealkaran/yellow-wide.svg)
+![visits yellow compact](dist/itsrealkaran/yellow-compact.svg)
+
+**visits** · yellow · regular
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=yellow&size=regular`
+
+![visits yellow regular](dist/itsrealkaran/yellow-regular.svg)
+
+**visits** · yellow · wide
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=yellow&size=wide`
+
+![visits yellow wide](dist/itsrealkaran/yellow-wide.svg)
 
