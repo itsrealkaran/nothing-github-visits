@@ -16,6 +16,20 @@ Compact is the view count. Regular adds followers. Wide is one square per 100 vi
 
 ![classic wide](dist/itsrealkaran/classic-wide.svg)
 
+## classic-r
+
+### compact
+
+![classic-r compact](dist/itsrealkaran/classic-r-compact.svg)
+
+### regular
+
+![classic-r regular](dist/itsrealkaran/classic-r-regular.svg)
+
+### wide
+
+![classic-r wide](dist/itsrealkaran/classic-r-wide.svg)
+
 ## white
 
 ### compact
@@ -29,6 +43,20 @@ Compact is the view count. Regular adds followers. Wide is one square per 100 vi
 ### wide
 
 ![white wide](dist/itsrealkaran/white-wide.svg)
+
+## white-r
+
+### compact
+
+![white-r compact](dist/itsrealkaran/white-r-compact.svg)
+
+### regular
+
+![white-r regular](dist/itsrealkaran/white-r-regular.svg)
+
+### wide
+
+![white-r wide](dist/itsrealkaran/white-r-wide.svg)
 
 ## light
 
