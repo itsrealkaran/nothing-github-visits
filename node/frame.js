@@ -31,7 +31,7 @@ function openSvg(mode, width, height, title, mark = 8, margin = 20) {
     `<svg xmlns="http://www.w3.org/2000/svg" width="${py(width)}" height="${py(height)}" ` +
     `viewBox="0 0 ${py(width)} ${py(height)}" role="img">` +
     `<title>${xml(title)}</title>` +
-    `<rect width="${py(width)}" height="${py(height)}" fill="${colors.bg}"/>` +
+    `<rect x="0.5" y="0.5" width="${py(width - 1)}" height="${py(height - 1)}" rx="6" fill="${colors.bg}" stroke="${colors.rule}" stroke-width="1"/>` +
     `<rect x="${py(margin)}" y="${py(margin)}" width="${py(mark)}" height="${py(mark)}" fill="${colors.mark}"/>`
   );
 }

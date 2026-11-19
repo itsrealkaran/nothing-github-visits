@@ -29,7 +29,8 @@ def open_svg(mode, width, height, title, mark=8, margin=20):
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
         f'viewBox="0 0 {width} {height}" role="img">'
         f"<title>{xml(title)}</title>"
-        f'<rect width="{width}" height="{height}" fill="{colors["bg"]}"/>'
+        f'<rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="6" '
+        f'fill="{colors["bg"]}" stroke="{colors["rule"]}" stroke-width="1"/>'
         f'<rect x="{margin}" y="{margin}" width="{mark}" height="{mark}" fill="{colors["mark"]}"/>'
     )
 

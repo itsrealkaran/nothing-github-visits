@@ -22,7 +22,7 @@ function xml(text) {
 function errorSvg(message) {
   return (
     '<svg xmlns="http://www.w3.org/2000/svg" width="495" height="120" viewBox="0 0 495 120" role="img">' +
-    '<rect width="495" height="120" fill="#000000"/>' +
+    '<rect x="0.5" y="0.5" width="494" height="119" rx="6" fill="#000000" stroke="#2A2A2A" stroke-width="1"/>' +
     '<text x="24" y="68" fill="#FFFFFF" font-family="ui-monospace, monospace" font-size="16">' +
     xml(message) +
     "</text></svg>"
