@@ -4,7 +4,7 @@ Foundation colours carry the field and the text. Primary colours are accents.
 The dot grid is only the product name. Body labels use a mono face.
 """
 
-MODES = ("classic", "white", "light", "red", "blue", "yellow")
+MODES = ("classic", "classic-r", "white", "white-r", "light", "red", "blue", "yellow")
 SIZES = ("compact", "regular", "wide")
 
 THEMES = {
@@ -16,12 +16,28 @@ THEMES = {
         "mark": "#FFFFFF",
         "figure": "#FFFFFF",
     },
+    "classic-r": {
+        "bg": "#000000",
+        "fg": "#FFFFFF",
+        "muted": "#B1B3B3",
+        "rule": "#2A2A2A",
+        "mark": "#C8102E",
+        "figure": "#FFFFFF",
+    },
     "white": {
         "bg": "#FFFFFF",
         "fg": "#000000",
         "muted": "#4A4A4A",
         "rule": "#E4E4E4",
         "mark": "#000000",
+        "figure": "#000000",
+    },
+    "white-r": {
+        "bg": "#FFFFFF",
+        "fg": "#000000",
+        "muted": "#4A4A4A",
+        "rule": "#E4E4E4",
+        "mark": "#C8102E",
         "figure": "#000000",
     },
     "light": {
