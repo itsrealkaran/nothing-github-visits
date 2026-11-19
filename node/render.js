@@ -29,11 +29,15 @@ function badge(mode, colors, data) {
     `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" ` +
       `viewBox="0 0 ${width} ${height}" role="img">` +
       `<title>${data.login} profile views</title>` +
+      `<defs><clipPath id="card"><rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="6"/></clipPath></defs>` +
+      `<g clip-path="url(#card)">` +
       `<rect width="${width}" height="${height}" fill="${colors.bg}"/>` +
       `<rect x="${left}" width="${right}" height="${height}" fill="${colors.figure}"/>`,
     `<rect x="8" y="11" width="6" height="6" fill="${colors.mark}"/>`,
     label(22, 19, "Profile views", colors.fg, 12, 0.3),
     label(f(left + right / 2), 19, text, colors.bg, 12, 0.2, "middle"),
+    "</g>",
+    `<rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="6" fill="none" stroke="${colors.rule}" stroke-width="1"/>`,
     "</svg>",
   ].join("\n");
 }
