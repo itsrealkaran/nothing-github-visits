@@ -88,7 +88,7 @@ def _board(mode, colors, data, width, height, columns, number_size, number_y, ca
 
 
 def _variant(card, login, mode, size, filename):
-    url = f"https://github.com/itsrealkaran/{card}?username={login}&theme={mode}&size={size}"
+    url = f"https://github.com/itsrealkaran/nothing-github-visits?username={login}&theme={mode}&size={size}"
     return [
         f"**{card}** · {mode} · {size}",
         "",
