@@ -1,6 +1,6 @@
 # itsrealkaran
 
-Compact is the view count. Regular adds followers. Wide is one square per 100 views.
+Badge is the inline profile-view count. Mini is the count. Compact adds followers. Regular and wide add following.
 
 ## classic
 
@@ -28,6 +28,12 @@ Compact is the view count. Regular adds followers. Wide is one square per 100 vi
 
 ![visits classic wide](dist/itsrealkaran/classic-wide.svg)
 
+**visits** · classic · badge
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=classic&size=badge`
+
+![visits classic badge](dist/itsrealkaran/classic-badge.svg)
+
 ## classic-r
 
 **visits** · classic-r · mini
@@ -53,6 +59,12 @@ Compact is the view count. Regular adds followers. Wide is one square per 100 vi
 `https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=classic-r&size=wide`
 
 ![visits classic-r wide](dist/itsrealkaran/classic-r-wide.svg)
+
+**visits** · classic-r · badge
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=classic-r&size=badge`
+
+![visits classic-r badge](dist/itsrealkaran/classic-r-badge.svg)
 
 ## white
 
@@ -80,6 +92,12 @@ Compact is the view count. Regular adds followers. Wide is one square per 100 vi
 
 ![visits white wide](dist/itsrealkaran/white-wide.svg)
 
+**visits** · white · badge
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=white&size=badge`
+
+![visits white badge](dist/itsrealkaran/white-badge.svg)
+
 ## white-r
 
 **visits** · white-r · mini
@@ -105,6 +123,12 @@ Compact is the view count. Regular adds followers. Wide is one square per 100 vi
 `https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=white-r&size=wide`
 
 ![visits white-r wide](dist/itsrealkaran/white-r-wide.svg)
+
+**visits** · white-r · badge
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=white-r&size=badge`
+
+![visits white-r badge](dist/itsrealkaran/white-r-badge.svg)
 
 ## light
 
@@ -132,6 +156,12 @@ Compact is the view count. Regular adds followers. Wide is one square per 100 vi
 
 ![visits light wide](dist/itsrealkaran/light-wide.svg)
 
+**visits** · light · badge
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=light&size=badge`
+
+![visits light badge](dist/itsrealkaran/light-badge.svg)
+
 ## red
 
 **visits** · red · mini
@@ -157,6 +187,12 @@ Compact is the view count. Regular adds followers. Wide is one square per 100 vi
 `https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=red&size=wide`
 
 ![visits red wide](dist/itsrealkaran/red-wide.svg)
+
+**visits** · red · badge
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=red&size=badge`
+
+![visits red badge](dist/itsrealkaran/red-badge.svg)
 
 ## blue
 
@@ -184,6 +220,12 @@ Compact is the view count. Regular adds followers. Wide is one square per 100 vi
 
 ![visits blue wide](dist/itsrealkaran/blue-wide.svg)
 
+**visits** · blue · badge
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=blue&size=badge`
+
+![visits blue badge](dist/itsrealkaran/blue-badge.svg)
+
 ## yellow
 
 **visits** · yellow · mini
@@ -209,4 +251,10 @@ Compact is the view count. Regular adds followers. Wide is one square per 100 vi
 `https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=yellow&size=wide`
 
 ![visits yellow wide](dist/itsrealkaran/yellow-wide.svg)
+
+**visits** · yellow · badge
+
+`https://github.com/itsrealkaran/visits?username=itsrealkaran&theme=yellow&size=badge`
+
+![visits yellow badge](dist/itsrealkaran/yellow-badge.svg)
 
