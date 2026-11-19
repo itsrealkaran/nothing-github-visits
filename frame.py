@@ -63,9 +63,9 @@ def xml(text):
     return str(text).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def label(x, y, text, fill, size=13, tracking=0.4):
+def label(x, y, text, fill, size=13, tracking=0.4, anchor="start"):
     return (
-        f'<text x="{x}" y="{y}" fill="{fill}" '
+        f'<text x="{x}" y="{y}" fill="{fill}" text-anchor="{anchor}" '
         f'font-family="ui-monospace, Geist Mono, monospace" '
         f'font-size="{size}" letter-spacing="{tracking}" dominant-baseline="auto">{xml(text)}</text>'
     )
