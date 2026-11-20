@@ -7,7 +7,7 @@ if [[ $# -lt 1 ]]; then
 fi
 
 MSG="$1"
-git commit -m "$MSG" --trailer "Made-with: Cursor" 2>/dev/null || git commit -m "$MSG"
+git commit -m "$MSG"
 
 # Strip Cursor co-author trailers if hooks or tooling added them
 if git log -1 --format='%B' | grep -qi 'Co-authored-by:'; then
