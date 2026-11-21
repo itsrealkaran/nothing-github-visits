@@ -1,6 +1,6 @@
 # itsrealkaran
 
-Badge is the inline profile-view count. Mini is the count. Compact adds followers. Regular and wide add following.
+Badge is the inline profile-view count. Mini is the count. Compact adds followers. Regular and wide add following. The card has a hairline border and a small corner.
 
 ## classic
 
