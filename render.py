@@ -27,7 +27,7 @@ def render(mode, size, data, border=True):
             mode, colors, data, 896, 220, TRIPLE, 40, 120, 156, 178, 202,
             corner=f"@{data['login']}", footer=f"Since {data['since']}", border=border,
         )
-    return _board(mode, colors, data, 440, 195, TRIPLE, 28, 112, 138, 158, 180, border=border)
+    return _board(mode, colors, data, 408, 195, TRIPLE, 28, 112, 138, 158, 180, border=border)
 
 
 def _badge(mode, colors, data, border):
