@@ -15,7 +15,7 @@ function render(mode, size, data, border = true) {
   if (size === "wide") {
     return board(mode, colors, data, 896, 220, TRIPLE, 40, 120, 156, 178, 202, "@" + data.login, "Since " + data.since, border);
   }
-  return board(mode, colors, data, 495, 195, TRIPLE, 28, 112, 138, 158, 180, "", "", border);
+  return board(mode, colors, data, 440, 195, TRIPLE, 28, 112, 138, 158, 180, "", "", border);
 }
 
 function badge(mode, colors, data, border) {
