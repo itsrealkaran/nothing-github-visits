@@ -27,7 +27,7 @@ https://github.com/itsrealkaran/nothing-github-visits?username=itsrealkaran
 ![visits](https://github.com/itsrealkaran/nothing-github-visits?username=itsrealkaran)
 ```
 
-Leave `theme` and `size` off for the classic regular card. An unknown username, theme, or size still returns an SVG, so the image slot in a README stays intact.
+Leave `theme` and `size` off for the classic regular card. It has a hairline border and a small corner. An unknown username, theme, or size still returns an SVG, so the image slot in a README stays intact.
 
 ## Themes
 
@@ -63,6 +63,7 @@ The files in `dist/` use the theme name, then the size: `classic-regular.svg`.
 | `username` | yes |  | GitHub login. `user` is the same parameter. |
 | `theme` | no | `classic` | One of the themes above. |
 | `size` | no | `regular` | One of the sizes above. |
+| `border` | no | `1` | `0` removes the border and uses the rounder corner. |
 
 `badge` is the short inline count. Leave `size` off for the regular card.
 
@@ -388,7 +389,7 @@ Use that address in the image URL. The query stays the same.
 | --- | --- | --- |
 | `GH_TOKEN` | for a public server | GitHub token. `GITHUB_TOKEN` is the same variable. |
 | `PORT` | no | Listen port. Default `8080`. |
-| `CARD_CACHE_SECONDS` | no | How long a finished SVG is reused. Default `3600`. |
+| `CARD_CACHE_SECONDS` | no | How long a finished SVG is reused. Default `60`, so a profile view count does not sit for an hour. |
 
 ### Create a token
 
