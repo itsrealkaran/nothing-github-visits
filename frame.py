@@ -23,14 +23,24 @@ def dots(text, x, y, fill, scale=2.4):
     return "".join(parts), cursor - x
 
 
-def open_svg(mode, width, height, title, mark=8, margin=20):
+def open_svg(mode, width, height, title, mark=8, margin=20, border=True):
     colors = theme(mode)
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
         f'viewBox="0 0 {width} {height}" role="img">'
         f"<title>{xml(title)}</title>"
-        f'<rect width="{width}" height="{height}" rx="16" fill="{colors["bg"]}"/>'
+        f"{card_rect(width, height, colors, border)}"
         f'<rect x="{margin}" y="{margin}" width="{mark}" height="{mark}" fill="{colors["mark"]}"/>'
+    )
+
+
+def card_rect(width, height, colors, border, fill=""):
+    ink = fill or colors["bg"]
+    if not border:
+        return f'<rect width="{width}" height="{height}" rx="16" fill="{ink}"/>'
+    return (
+        f'<rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" '
+        f'rx="8" fill="{ink}" stroke="{colors["rule"]}"/>'
     )
 
 

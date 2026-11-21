@@ -10,7 +10,7 @@ const { render } = require("./node/render");
 const CARD = "visits";
 const GITHUB = process.env.GITHUB_REDIRECT || "https://github.com/itsrealkaran/nothing-github-visits";
 const PORT = Number(process.env.PORT || 8080);
-const TTL = Number(process.env.CARD_CACHE_SECONDS || 3600);
+const TTL = Number(process.env.CARD_CACHE_SECONDS || 60);
 const MODES = new Set(["classic", "classic-r", "white", "white-r", "light", "red", "blue", "yellow"]);
 const SIZES = new Set(["badge", "mini", "compact", "regular", "wide"]);
 const cache = new Map();
@@ -34,9 +34,14 @@ function loginOk(value) {
   return /^[A-Za-z0-9-]+$/.test(value);
 }
 
-async function draw(login, theme, size, glyph) {
+async function draw(login, theme, size, glyph, border) {
   const data = await load(login, glyph === "1");
-  return render(theme, size, data);
+  return render(theme, size, data, border !== "0");
+}
+
+function flag(value, fallback) {
+  const text = (value || fallback).trim().toLowerCase();
+  return ["0", "no", "off", "false"].includes(text) ? "0" : "1";
 }
 
 function send(res, status, type, body, maxAge, headers) {
@@ -73,8 +78,8 @@ async function handle(req, res) {
   }
   const theme = (url.searchParams.get("theme") || "classic").trim() || "classic";
   const size = (url.searchParams.get("size") || "regular").trim() || "regular";
-  const flag = (url.searchParams.get("glyph") || url.searchParams.get("pfp") || "1").trim().toLowerCase();
-  const glyph = ["0", "no", "off", "false"].includes(flag) ? "0" : "1";
+  const glyph = flag(url.searchParams.get("glyph") || url.searchParams.get("pfp"), "1");
+  const border = (url.searchParams.get("border") || "").trim() === "0" ? "0" : "1";
   if (!MODES.has(theme)) {
     send(res, 200, "image/svg+xml; charset=utf-8", errorSvg("unknown theme " + theme), 60);
     return;
@@ -83,14 +88,14 @@ async function handle(req, res) {
     send(res, 200, "image/svg+xml; charset=utf-8", errorSvg("unknown size " + size), 60);
     return;
   }
-  const key = [username.toLowerCase(), theme, size, glyph].join("\0");
+  const key = [username.toLowerCase(), theme, size, glyph, border].join("\0");
   const hit = cache.get(key);
   if (hit && hit.expires > Date.now()) {
     send(res, 200, "image/svg+xml; charset=utf-8", hit.svg, TTL);
     return;
   }
   try {
-    const svg = await draw(username, theme, size, glyph);
+    const svg = await draw(username, theme, size, glyph, border);
     cache.set(key, { expires: Date.now() + TTL * 1000, svg });
     send(res, 200, "image/svg+xml; charset=utf-8", svg, TTL);
   } catch (error) {
