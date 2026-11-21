@@ -11,7 +11,7 @@ from draw import draw
 
 CARD = "visits"
 GITHUB = os.environ.get("GITHUB_REDIRECT", "https://github.com/itsrealkaran/nothing-github-visits")
-TTL = int(os.environ.get("CARD_CACHE_SECONDS", "3600"))
+TTL = int(os.environ.get("CARD_CACHE_SECONDS", "60"))
 _lock = threading.Lock()
 _cache = {}
 
@@ -28,6 +28,11 @@ def error_svg(message):
         f'<text x="24" y="68" fill="#FFFFFF" font-family="ui-monospace, monospace" '
         f'font-size="16">{xml(message)}</text></svg>'
     )
+
+
+def _flag(value, fallback="1"):
+    text = (value or fallback).strip().lower()
+    return text not in ("0", "no", "off", "false")
 
 
 def login_ok(value):
@@ -79,14 +84,14 @@ class Handler(BaseHTTPRequestHandler):
             return
         theme = (query.get("theme") or ["classic"])[0].strip() or "classic"
         size = (query.get("size") or ["regular"])[0].strip() or "regular"
-        flag = (query.get("glyph") or query.get("pfp") or ["1"])[0].strip().lower()
-        glyph = flag not in ("0", "no", "off", "false")
-        key = (username.lower(), theme, size, glyph)
+        glyph = _flag((query.get("glyph") or query.get("pfp") or ["1"])[0])
+        border = (query.get("border") or [""])[0].strip() != "0"
+        key = (username.lower(), theme, size, glyph, border)
         with _lock:
             svg = cached(key)
         if svg is None:
             try:
-                svg = draw(username, theme, size, glyph)
+                svg = draw(username, theme, size, glyph, border)
             except SystemExit as exc:
                 message = str(exc) or "card failed"
                 self._send(200, "image/svg+xml; charset=utf-8", error_svg(message).encode(), 60, head)
