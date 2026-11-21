@@ -25,14 +25,23 @@ function dots(text, x, y, fill, scale = 2.4) {
   return [parts.join(""), cursor - x];
 }
 
-function openSvg(mode, width, height, title, mark = 8, margin = 20) {
+function openSvg(mode, width, height, title, mark = 8, margin = 20, border = true) {
   const colors = theme(mode);
   return (
     `<svg xmlns="http://www.w3.org/2000/svg" width="${py(width)}" height="${py(height)}" ` +
     `viewBox="0 0 ${py(width)} ${py(height)}" role="img">` +
     `<title>${xml(title)}</title>` +
-    `<rect width="${py(width)}" height="${py(height)}" rx="16" fill="${colors.bg}"/>` +
+    cardRect(width, height, colors, border) +
     `<rect x="${py(margin)}" y="${py(margin)}" width="${py(mark)}" height="${py(mark)}" fill="${colors.mark}"/>`
+  );
+}
+
+function cardRect(width, height, colors, border, fill) {
+  const ink = fill || colors.bg;
+  if (!border) return `<rect width="${py(width)}" height="${py(height)}" rx="16" fill="${ink}"/>`;
+  return (
+    `<rect x="0.5" y="0.5" width="${py(width - 1)}" height="${py(height - 1)}" ` +
+    `rx="8" fill="${ink}" stroke="${colors.rule}"/>`
   );
 }
 
@@ -44,4 +53,4 @@ function label(x, y, text, fill, size = 13, tracking = 0.4, anchor = "start") {
   );
 }
 
-module.exports = { dots, openSvg, label };
+module.exports = { dots, openSvg, label, cardRect };

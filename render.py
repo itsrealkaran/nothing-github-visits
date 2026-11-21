@@ -3,7 +3,7 @@
 import sys
 from pathlib import Path
 
-from frame import dots, label, open_svg
+from frame import card_rect, dots, label, open_svg
 from github_user import profile_views
 from nothing import MODES, SIZES, theme
 
@@ -14,23 +14,23 @@ PAIR = (("views", "Views"), ("followers", "Followers"))
 TRIPLE = PAIR + (("following", "Following"),)
 
 
-def render(mode, size, data):
+def render(mode, size, data, border=True):
     colors = theme(mode)
     if size == "badge":
-        return _badge(mode, colors, data)
+        return _badge(mode, colors, data, border)
     if size == "mini":
-        return _mini(mode, colors, data)
+        return _mini(mode, colors, data, border)
     if size == "compact":
-        return _board(mode, colors, data, 495, 180, PAIR, 32, 108, 132, 148, 168)
+        return _board(mode, colors, data, 495, 180, PAIR, 32, 108, 132, 148, 168, border=border)
     if size == "wide":
         return _board(
             mode, colors, data, 896, 220, TRIPLE, 40, 120, 156, 178, 202,
-            corner=f"@{data['login']}", footer=f"Since {data['since']}",
+            corner=f"@{data['login']}", footer=f"Since {data['since']}", border=border,
         )
-    return _board(mode, colors, data, 495, 195, TRIPLE, 28, 112, 138, 158, 180)
+    return _board(mode, colors, data, 495, 195, TRIPLE, 28, 112, 138, 158, 180, border=border)
 
 
-def _badge(mode, colors, data):
+def _badge(mode, colors, data, border):
     """Inline label and count. Split fill, short enough for a profile line."""
     text = f"{data['views']:,}"
     advance = 7.6
@@ -38,11 +38,13 @@ def _badge(mode, colors, data):
     right = 14 + round(len(text) * advance) + 14
     width = left + right
     height = 28
+    radius = 8 if border else 16
+    edge = card_rect(width, height, colors, True, "none") if border else ""
     return "\n".join([
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
         f'viewBox="0 0 {width} {height}" role="img">'
         f"<title>{data['login']} profile views</title>"
-        f'<defs><clipPath id="card"><rect width="{width}" height="{height}" rx="16"/></clipPath></defs>'
+        f'<defs><clipPath id="card"><rect width="{width}" height="{height}" rx="{radius}"/></clipPath></defs>'
         f'<g clip-path="url(#card)">'
         f'<rect width="{width}" height="{height}" fill="{colors["bg"]}"/>'
         f'<rect x="{left}" width="{right}" height="{height}" fill="{colors["figure"]}"/>',
@@ -50,14 +52,15 @@ def _badge(mode, colors, data):
         label(22, 19, "Profile views", colors["fg"], 12, 0.3),
         label(left + right / 2, 19, text, colors["bg"], 12, 0.2, anchor="middle"),
         "</g>",
+        edge,
         "</svg>",
     ])
 
 
-def _mini(mode, colors, data):
+def _mini(mode, colors, data, border):
     name, _ = dots("VISITS", 28, 12, colors["fg"], scale=1.15)
     return "\n".join([
-        open_svg(mode, 220, 148, f"{data['login']} profile views", mark=6, margin=14),
+        open_svg(mode, 220, 148, f"{data['login']} profile views", mark=6, margin=14, border=border),
         name,
         label(16, 96, f"{data['views']:,}", colors["figure"], 32, -0.8),
         label(16, 118, "Views", colors["muted"], 11, 0.3),
@@ -66,10 +69,10 @@ def _mini(mode, colors, data):
     ])
 
 
-def _board(mode, colors, data, width, height, columns, number_size, number_y, caption_y, rule_y, footer_y, corner="", footer=""):
+def _board(mode, colors, data, width, height, columns, number_size, number_y, caption_y, rule_y, footer_y, corner="", footer="", border=True):
     name, _ = dots("VISITS", 40, 16, colors["fg"], scale=1.8)
     parts = [
-        open_svg(mode, width, height, f"{data['login']} profile views"),
+        open_svg(mode, width, height, f"{data['login']} profile views", border=border),
         name,
     ]
     if corner:
@@ -110,7 +113,7 @@ def main():
     lines = [
         f"# {data['login']}",
         "",
-        "Badge is the inline profile-view count. Mini is the count. Compact adds followers. Regular and wide add following.",
+        "Badge is the inline profile-view count. Mini is the count. Compact adds followers. Regular and wide add following. The card has a hairline border and a small corner.",
         "",
     ]
     for mode in MODES:
