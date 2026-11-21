@@ -42,7 +42,7 @@ def _badge(mode, colors, data):
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
         f'viewBox="0 0 {width} {height}" role="img">'
         f"<title>{data['login']} profile views</title>"
-        f'<defs><clipPath id="card"><rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="6"/></clipPath></defs>'
+        f'<defs><clipPath id="card"><rect width="{width}" height="{height}" rx="16"/></clipPath></defs>'
         f'<g clip-path="url(#card)">'
         f'<rect width="{width}" height="{height}" fill="{colors["bg"]}"/>'
         f'<rect x="{left}" width="{right}" height="{height}" fill="{colors["figure"]}"/>',
@@ -50,7 +50,6 @@ def _badge(mode, colors, data):
         label(22, 19, "Profile views", colors["fg"], 12, 0.3),
         label(left + right / 2, 19, text, colors["bg"], 12, 0.2, anchor="middle"),
         "</g>",
-        f'<rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="6" fill="none" stroke="{colors["rule"]}" stroke-width="1"/>',
         "</svg>",
     ])
 
