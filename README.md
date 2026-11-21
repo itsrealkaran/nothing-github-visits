@@ -51,7 +51,7 @@ The title is a dot grid. Labels are monospace. On `classic-r` and `white-r` the 
 | `badge` | inline | “Profile views” and the count. |
 | `mini` | 220×148 | The count and the start date. |
 | `compact` | 495×180 | Views and followers. |
-| `regular` | 495×195 | Views, followers, and following. Default. |
+| `regular` | 440×195 | Views, followers, and following. Default. |
 | `wide` | 896×220 | The same three counts, with the login at the top right. |
 
 The files in `dist/` use the theme name, then the size: `classic-regular.svg`.
